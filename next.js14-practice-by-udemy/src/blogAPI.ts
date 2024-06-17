@@ -7,6 +7,8 @@ export const getAllArticles = async (): Promise<Article[]> => {
     throw new Error("意図的にエラー発生");
   }
 
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
   const articles = await res.json();
   return articles;
 };
