@@ -1,10 +1,18 @@
 import Image from "next/image";
 import ArticleList from "./components/ArticleList";
 import { getAllArticles } from "@/blogAPI";
+import { useEffect } from "react";
 
 export default async function Home() {
   const articles = await getAllArticles();
   console.log(articles);
+
+  // CSRの場合
+  // useEffect(() => {
+  //   const getAllBlogs = async () => {
+  //     await fetch(`http://localhost:3001/posts`);
+  //   };
+  // }, []);
 
   return (
     <div className="md:flex">
