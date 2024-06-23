@@ -25,7 +25,6 @@ const CreateBlogPage = () => {
           <label className="text-gray-700 text-sm font-bold mb-2">本文</label>
           <textarea className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight hover:outline-none" />
         </div>
-
         <button
           type="submit"
           className="py-2 px-4 border rounded-md bg-orange-300"
